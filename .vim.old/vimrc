@@ -1,0 +1,31 @@
+set number						"line numbers
+syntax on
+set mouse=a
+set autoindent
+"set smartindent
+"set smarttab
+set tabstop=2
+set softtabstop=2
+set expandtab
+"set textwidth=70
+"set nowrap
+set linebreak
+set wildmode=list:longest
+set wildmenu
+set scrolloff=8
+set ttymouse=xterm2
+map <F8> :w<CR>:make all<CR>
+map <F9> :w<CR>:make run<CR>
+
+"Col width 80
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
+set incsearch 				"Find the next match as we type the search
+set hlsearch 					"Hilight searches by default
+
+filetype plugin on
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS

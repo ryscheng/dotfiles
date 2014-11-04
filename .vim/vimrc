@@ -1,15 +1,13 @@
-" vim:fdm=marker:ts=4:sw=4:et:
+" vim:fdm=marker:ts=2:sw=2:et:
 "        _
 " __   _(_)_ __ ___  _ __ ___
 " \ \ / / | '_ ` _ \| '__/ __|
 "  \ V /| | | | | | | | | (__
 "   \_/ |_|_| |_| |_|_|  \___|
 "
-" Ian's .vimrc file
 "
 " Section: Key mappings {{{1
 "--------------------------------------------------------------------------
-
 " useful macros I use the most
 nmap \a :set formatoptions-=a<CR>:echo "autowrap disabled"<CR>
 nmap \A :set formatoptions+=a<CR>:echo "autowrap enabled"<CR>
@@ -41,6 +39,10 @@ nmap <C-e> :e#<CR>
 " Move between open buffers.
 map <C-n> :bnext<CR>
 map <C-p> :bprev<CR>
+
+" Adding Makefile shortcuts
+map <F8> :w<CR>:make all<CR>
+map <F9> :w<CR>:make run<CR>
 
 " Emacs-like bindings in normal mode
 nmap <C-x>0 <C-w>c
@@ -143,9 +145,7 @@ endfunction
 
 " Section: Hacks {{{1
 "--------------------------------------------------------------------------
-
 " Make j & k linewise {{{2
-
 " turn off linewise keys -- normally, the `j' and `k' keys move the cursor down
 " one entire line. with line wrapping on, this can cause the cursor to actually
 " skip a few lines on the screen because it's moving from line N to line N+1 in
@@ -177,7 +177,6 @@ nnoremap <C-w>l :call KeepCurrentLine('l')<CR>
 
 " Section: Abbrevations {{{1
 "--------------------------------------------------------------------------
-
 " Vim command line: $c
 " URL: http://www.vim.org/tips/tip.php?tip_id=1055
 cno $c e <C-\>eCurrentFileDir()<CR>
@@ -197,7 +196,6 @@ endfunction
 
 " Section: Vim options {{{1
 "--------------------------------------------------------------------------
-
 set autoindent              " Carry over indenting from previous line
 set autoread                " Don't bother me hen a file changes
 set autowrite               " Write on :next/:prev/^Z
@@ -216,6 +214,7 @@ set fillchars=vert:\ ,stl:\ ,stlnc:\ ,fold:-,diff:┄
                             " Unicode chars for diffs/folds, and rely on
                             " Colors for window borders
 silent! set foldmethod=marker " Use braces by default
+set foldlevel=99            " Begin unfolded
 set formatoptions=tcqn1     " t - autowrap normal text
                             " c - autowrap comments
                             " q - gq formats comments
@@ -236,7 +235,7 @@ set matchtime=2             " Tenths of second to hilight matching paren
 set modelines=5             " How many lines of head & tail to look for ml's
 silent! set mouse=nvc       " Use the mouse, but not in insert mode
 set nobackup                " No backups left after done editing
-set nonumber                " No line numbers to start
+set number                  " No line numbers to start
 set visualbell t_vb=        " No flashing or beeping at all
 set nowritebackup           " No backups made while editing
 set printoptions=paper:letter " US paper
@@ -244,16 +243,16 @@ set ruler                   " Show row/col and percentage
 set scroll=4                " Number of lines to scroll with ^U/^D
 set scrolloff=15            " Keep cursor away from this many chars top/bot
 set shiftround              " Shift to certain columns, not just n spaces
-set shiftwidth=4            " Number of spaces to shift for autoindent or >,<
+set shiftwidth=2            " Number of spaces to shift for autoindent or >,<
 set shortmess+=A            " Don't bother me when a swapfile exists
 set showbreak=              " Show for lines that have been wrapped, like Emacs
 set showmatch               " Hilight matching braces/parens/etc.
 set sidescrolloff=3         " Keep cursor away from this many chars left/right
 set smartcase               " Lets you search for ALL CAPS
-set softtabstop=4           " Spaces 'feel' like tabs
+set softtabstop=2           " Spaces 'feel' like tabs
 set suffixes+=.pyc          " Ignore these files when tab-completing
-set tabstop=4               " The One True Tab
-set notitle                 " Don't set the title of the Vim window
+set tabstop=2               " The One True Tab
+set title                   " Don't set the title of the Vim window
 set wildmenu                " Show possible completions on command line
 set wildmode=list:longest,full " List all options and complete
 set wildignore=*.class,*.o,*~,*.pyc,.git,node_modules  " Ignore certain files in tab-completion
@@ -436,8 +435,8 @@ highlight clear FoldColumn
 highlight def link FoldColumn Ignore
 highlight clear Folded
 highlight link Folded Ignore
-highlight clear LineNr
-highlight! def link LineNr Ignore
+" highlight clear LineNr
+" highlight! def link LineNr Ignore
 
 " nice-looking hilight if I remember to set my terminal colors
 highlight clear Search
@@ -474,4 +473,3 @@ highlight link markdownListMarker Todo
 "--------------------------------------------------------------------------
 
 " now load specifics to this machine
-source ~/.vimlocal
