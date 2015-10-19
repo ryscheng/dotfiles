@@ -105,6 +105,7 @@ fi
 cd
 
 ### CUSTOM
+export PATH=$PATH:/usr/local/bin:/Library/TeX/texbin
 export ANDROID_HOME=/usr/local/opt/android-sdk
 # export GOROOT=/usr/local/opt/go
 export GOPATH=~/bin/gopath
