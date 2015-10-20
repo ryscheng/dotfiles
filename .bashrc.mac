@@ -104,12 +104,20 @@ fi
 
 cd
 
-### CUSTOM
+### CUSTOM ###
+
+#COLORS
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+#PATH
 export PATH=$PATH:/usr/local/bin:/Library/TeX/texbin
-export ANDROID_HOME=/usr/local/opt/android-sdk
-# export GOROOT=/usr/local/opt/go
-export GOPATH=~/bin/gopath
 export FIREFOX_BIN="/Users/ryscheng/Applications/Firefox.app/Contents/MacOS/firefox-bin"
 export CHROME_BIN="/Users/ryscheng/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+
+#DEV
+export ANDROID_HOME=/usr/local/opt/android-sdk
+export GOPATH=~/bin/gopath
+#export GOROOT=/usr/local/opt/go
+#export NVM_DIR=~/.nvm
+#source $(brew --prefix nvm)/nvm.sh
