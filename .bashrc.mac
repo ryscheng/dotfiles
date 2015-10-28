@@ -119,7 +119,7 @@ export CHROME_BIN="/Users/ryscheng/Applications/Google Chrome.app/Contents/MacOS
 
 #DEV
 export ANDROID_HOME=/usr/local/opt/android-sdk
-export GOPATH=~/bin/gopath
+export GOPATH=/usr/local/lib/gopath
 export GEM_HOME=/usr/local/lib/rubygems
 #export GOROOT=/usr/local/opt/go
 #export NVM_DIR=~/.nvm
