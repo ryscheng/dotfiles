@@ -121,6 +121,7 @@ export CHROME_BIN="/Users/ryscheng/Applications/Google Chrome.app/Contents/MacOS
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export GOPATH=/usr/local/lib/gopath
 export GEM_HOME=/usr/local/lib/rubygems
+source /usr/local/share/gazebo/setup.sh
 #export GOROOT=/usr/local/opt/go
 #export NVM_DIR=~/.nvm
 #source $(brew --prefix nvm)/nvm.sh
