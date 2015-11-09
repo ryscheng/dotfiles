@@ -2,8 +2,8 @@
 # NOTE: This file is renamed to .gitconfig by my install script.
 # 
 [user]
-	name = Ian Langworth
-	email = ian@langworth.com
+	name = Raymond Cheng
+	email = me@raymondcheng.net
 [core]
 	editor = vim
 	pager = less -FRX
@@ -44,10 +44,12 @@
 	svnprep = rebase -i git-svn
 	svnup = svn rebase
 	today = diff --stat 'HEAD@{midnight}'
-	tree = log --graph --oneline --all
+	#tree = log --graph --oneline --all
+	tree = log --graph --decorate --pretty=format:\"%Cred%h%Creset %an (%ar): %s %Cgreen%d\"
 	undo = reset --mixed HEAD^
 	unstage = reset HEAD
-	up = pull --rebase origin
+	#up = pull --rebase origin
+	up = "!git remote update -p; git merge --ff-only @{u}"
 	yesterday = diff --stat 'HEAD@{yesterday}' 'HEAD@{midnight}'
 [color]
 	diff = auto
