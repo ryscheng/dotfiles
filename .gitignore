@@ -1,10 +1,24 @@
-.DS_Store
-.ropeproject
-*.pyc
+# Editors
 .*.swp
 *~
 .#*
+
+# Compilers
+*.pyc
+
+# Project Files
+.ropeproject
 .unison.*.unison.tmp-bad
 *_flymake.*
 .vim/bundle/*/doc/tags
 .vim/bundle/*/doc/tags-??
+
+# OSX
+.DS_Store
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
