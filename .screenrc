@@ -1,7 +1,3 @@
-#
-# Ian's screen configuration
-#
-
 # use ^T instead of ^A as the command key
 escape ^Tt
 
@@ -23,7 +19,11 @@ msgminwait 1
 # 12-hour time
 #hardstatus alwayslastline "%{k}%-w%{.kY}%n %t%{-}%+w %= %H: %l %d/%m %C%a"
 # 24-hour time
-hardstatus alwayslastline "%{k}%-w%{.kY}%n %t%{-}%+w %= %H: %l %d/%m %c"
+# hardstatus alwayslastline "%{k}%-w%{.kY}%n %t%{-}%+w %= %H: %l %d/%m %c"
+
+# ryscheng custom
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]' 
 
 # When splitting windows, set the inactive splits' captions background to grey.
 # (Replace the 'K' with another color or Remove the '%:' if you want to reverse the logic.)
@@ -41,3 +41,5 @@ bind H resize 20
 #termcap  xterm|dtterm|rxvt|fptwist hs@:cs=\E[%i%d;%dr:im=\E[6h:ei=\E[4l
 #terminfo xterm|dtterm|rxvt|fptwist hs@:cs=\E[%i%p1%d;%p2%dr:im=\E[4h:ei=\E[4l
 
+screen -t TODO	0 	vim -p7 /home/ryscheng/current/postits/todo /home/ryscheng/current/postits/journal /home/ryscheng/current/postits/ideas /home/ryscheng/current/postits/bboy /home/ryscheng/current/postits/contacts /home/ryscheng/current/postits/finances /home/ryscheng/current/postits/members
+screen -t bash		1	bash
