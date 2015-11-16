@@ -1,11 +1,11 @@
 [user]
-	email = ryscheng@cs.washington.edu
-	name = Raymond Cheng
+  name = Raymond Cheng
+  email = me@raymondcheng.net
 [core]
-	editor = vim
-	excludesfile = ~/.gitignore
+  editor = vim
+  excludesfile = ~/.gitignore
 [push]
-	default = simple
+  default = simple
 [color]
   ui = true
 [alias]
