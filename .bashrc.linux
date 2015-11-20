@@ -125,7 +125,6 @@ export PATH=$PATH:~/bin/android-sdk-linux/platform-tools
 #DEV
 export GOPATH=/usr/local/lib/gopath
 export GEM_HOME=/usr/local/lib/rubygems
-source /opt/ros/indigo/setup.bash
 
 #SSH-AGENT
 eval `keychain --eval --agents ssh`
