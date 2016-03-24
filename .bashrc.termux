@@ -115,23 +115,3 @@ fi
 
 ### CUSTOM ###
 
-# added by travis gem
-[ -f /home/ryscheng/.travis/travis.sh ] && source /home/ryscheng/.travis/travis.sh
-
-#PATH
-export PATH=$PATH:~/bin/android-sdk-linux/tools
-export PATH=$PATH:~/bin/android-sdk-linux/platform-tools
-
-#DEV
-export GOPATH=/usr/local/lib/gopath
-export GEM_HOME=/usr/local/lib/rubygems
-
-#SSH-AGENT
-eval `keychain --eval --agents ssh`
-
-#ROS
-source /opt/ros/indigo/setup.bash
-source ~/infobot/devel/setup.bash
-export ROS_IP=128.208.4.46
-export ROS_MASTER_URI=http://${ROS_IP}:11311
-#export ROS_MASTER_URI=http://128.208.7.254:11311
