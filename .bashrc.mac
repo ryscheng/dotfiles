@@ -112,6 +112,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 #PATH
 export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:/usr/local/lib/rubygems/bin
 export PATH=$PATH:/Library/TeX/texbin
 export FIREFOX_BIN="/Users/ryscheng/Applications/Firefox.app/Contents/MacOS/firefox-bin"
