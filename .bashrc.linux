@@ -129,6 +129,10 @@ fi
 export GOPATH=/usr/local/lib/gopath
 export GEM_HOME=/usr/local/lib/rubygems
 
+#PATH
+export PATH=$PATH:$GEM_HOME/bin
+export PATH=$PATH:$GOPATH/bin
+
 #SSH-AGENT
 eval `keychain --eval --agents ssh`
 
