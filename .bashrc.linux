@@ -130,7 +130,7 @@ export GOPATH=/usr/local/lib/gopath
 export GEM_HOME=/usr/local/lib/rubygems
 
 #SSH-AGENT
-eval `keychain --eval --agents ssh`
+eval `keychain --eval --agents "gpg,ssh"`
 
 #ROS
 #source /opt/ros/indigo/setup.bash
