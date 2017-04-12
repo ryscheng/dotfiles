@@ -134,7 +134,7 @@ export PATH=$PATH:$GEM_HOME/bin
 export PATH=$PATH:$GOPATH/bin
 
 #SSH-AGENT
-eval `keychain --eval --agents ssh`
+eval `keychain --eval --agents "gpg,ssh"`
 
 #ROS
 #source /opt/ros/indigo/setup.bash
