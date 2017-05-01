@@ -1,7 +1,9 @@
 [Desktop Entry]
-Name=GNOME with Xmonad
-Comment=A GNOME fallback mode session using xmonad as the window manager.
+Name=GNOME + XMonad
+Comment=This session logs you into GNOME + XMonad
 Exec=gnome-session-xmonad
-TryExec=gnome-session
+TryExec=gnome-session-xmonad
 Icon=
 Type=Application
+DesktopNames=GNOME-Flashback;Unity;
+X-Ubuntu-Gettext-Domain=gnome-flashback
