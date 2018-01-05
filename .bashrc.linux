@@ -132,6 +132,7 @@ export GEM_HOME=/usr/local/lib/rubygems
 #PATH
 export PATH=$PATH:$GEM_HOME/bin
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$HOME/.cargo/bin
 
 #SSH-AGENT
 eval `keychain --eval --agents "gpg,ssh"`
