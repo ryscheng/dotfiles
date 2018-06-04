@@ -3,7 +3,17 @@
 *~
 .#*
 
-# Compilers
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.lof
+*.toc
+*.texshop
+
+# Python
 *.pyc
 
 # Project Files
