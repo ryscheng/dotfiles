@@ -40,12 +40,8 @@ fi
 echo "3. Starting gpg-agent"
 killall gpg-agent
 gpg-agent --daemon --enable-ssh-support
-if [ -f "$HOME/.gpg-agent-info" ]; then
-  echo "3.5. Exporting gpg-agent environment variables"
-  . "$HOME/.gpg-agent-info"
-  export GPG_AGENT_INFO
-  export SSH_AUTH_SOCK
-fi
+#export GPG_AGENT_INFO
+SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh; export SSH_AUTH_SOCK
 export GPG_TTY=$(tty)
 
 echo "4. Verifying gpg-agent is running"
