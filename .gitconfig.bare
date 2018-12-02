@@ -1,6 +1,7 @@
 [user]
   name = Raymond Cheng
   email = me@raymondcheng.net
+	signingkey = 9E54F484C328ACE5
 [core]
   editor = vim
   excludesfile = ~/.gitignore
