@@ -55,7 +55,8 @@ echo "3. Starting gpg-agent"
 killall gpg-agent
 gpg-agent --daemon --enable-ssh-support
 #export GPG_AGENT_INFO
-SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh; export SSH_AUTH_SOCK
+#SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh; export SSH_AUTH_SOCK
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 export GPG_TTY=$(tty)
 
 echo "4. Verifying gpg-agent is running"
