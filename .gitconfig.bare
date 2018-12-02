@@ -5,6 +5,8 @@
 [core]
   editor = vim
   excludesfile = ~/.gitignore
+[commit]
+  gpgsign = true
 [push]
   default = simple
 [color]
