@@ -129,3 +129,6 @@ export PATH=$HOME/.cargo/bin:$PATH
 export FIREFOX_BIN="/Applications/Firefox.app/Contents/MacOS/firefox-bin"
 export CHROME_BIN="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
+# GPG-AGENT
+export SSH_AUTH_SOCK=`gpgconf --list-dirs agent-ssh-socket`
+export GPG_TTY=$(tty)
