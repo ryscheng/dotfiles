@@ -1,11 +1,9 @@
 #!/bin/bash
 
 # Setup key guide
+# https://www.isi.edu/~calvin/yubikeyssh.htm
 # https://www.esev.com/blog/post/2015-01-pgp-ssh-key-on-yubikey-neo/
 # http://suva.sh/posts/gpg-ssh-smartcard-yubikey-keybase/
-
-# Setup client guide
-# https://www.isi.edu/~calvin/yubikeyssh.htm
 
 URL_PATH="https://raymondcheng.net/download/pgp"
 SIGN_KEY="E75C7AE71312EF23"
