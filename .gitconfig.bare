@@ -1,9 +1,13 @@
 [user]
   name = Raymond Cheng
   email = me@raymondcheng.net
+  #signingkey = 09EAF95E2210D51B
+  #signingkey = E75C7AE71312EF23
 [core]
   editor = vim
   excludesfile = ~/.gitignore
+[commit]
+  gpgsign = true
 [push]
   default = simple
 [color]

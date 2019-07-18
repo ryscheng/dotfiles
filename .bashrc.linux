@@ -136,6 +136,8 @@ export PATH=$PATH:$HOME/.cargo/bin
 
 #SSH-AGENT
 eval `keychain --eval --agents "gpg,ssh"`
+export SSH_AUTH_SOCK=`gpgconf --list-dirs agent-ssh-socket`
+export GPG_TTY=$(tty)
 
 #ROS
 #source /opt/ros/indigo/setup.bash

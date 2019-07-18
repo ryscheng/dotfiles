@@ -120,12 +120,15 @@ export GEM_HOME=/usr/local/lib/rubygems
 #source $(brew --prefix nvm)/nvm.sh
 
 #PATH
-export PATH=$PATH:/usr/local/bin
-export PATH=$PATH:/usr/local/sbin
-export PATH=$PATH:/Library/TeX/texbin
-export PATH=$PATH:$GEM_HOME/bin
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$HOME/.cargo/bin
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+export PATH=/Library/TeX/texbin:$PATH
+export PATH=$GEM_HOME/bin:$PATH
+export PATH=$GOPATH/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 export FIREFOX_BIN="/Applications/Firefox.app/Contents/MacOS/firefox-bin"
 export CHROME_BIN="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
+# GPG-AGENT
+export SSH_AUTH_SOCK=`gpgconf --list-dirs agent-ssh-socket`
+export GPG_TTY=$(tty)
