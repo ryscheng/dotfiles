@@ -30,11 +30,29 @@ cd $GITHUB
 if [ -d $DOTFILES ]; then echo "github:dotfiles already cloned"
 else 
 	git clone http://github.com/ryscheng/dotfiles.git
+fi
+if [ ! -f ~/.bashrc ]; then
+	echo "linking ~/.bashrc"
 	ln -s $DOTFILES/.bashrc.linux ~/.bashrc
+fi
+if [ ! -f ~/.gitconfig ]; then
+	echo "linking ~/.gitconfig"
 	ln -s $DOTFILES/.gitconfig.bare ~/.gitconfig
+fi
+if [ ! -f ~/.gitignore ]; then
+	echo "linking ~/.gitignore"
 	ln -s $DOTFILES/.gitignore ~/.gitignore
+fi
+if [ ! -f ~/.tmux.conf ]; then
+	echo "linking ~/.tmux.conf"
 	ln -s $DOTFILES/.tmux.conf ~/.tmux.conf
+fi
+if [ ! -f ~/.vim ]; then
+	echo "linking ~/.vim"
 	ln -s $DOTFILES/.vim ~/.vim
+fi
+if [ ! -f ~/.vimrc ]; then
+	echo "linking ~/.vimrc"
 	ln -s ~/.vim/vimrc ~/.vimrc
 fi
 cd
@@ -52,19 +70,19 @@ fi
 ##### APT #####
 #sudo apt-get dist-upgrade
 
-aptInstall cargo cargo
-aptInstall go golang
-aptInstall node nodejs 
-aptInstall rustc rustc
+#aptInstall cargo cargo
+#aptInstall go golang
+#aptInstall node nodejs 
+#aptInstall rustc rustc
 aptInstall tmux tmux
 aptInstall vim vim
-aptInstall vlc vlc
+#aptInstall vlc vlc
 
-aptInstall gpg2 gpgv2
-aptInstall gpg-agent gnupg-agent
-aptInstall pcsc_scan pcsc-tools
-aptInstall pcscd pcscd
+#aptInstall gpg2 gpgv2
+#aptInstall gpg-agent gnupg-agent
+#aptInstall pcsc_scan pcsc-tools
+#aptInstall pcscd pcscd
 
 ##### NPM #####
-npmInstall gulp gulp
-npmInstall ncu npm-check-updates
+#npmInstall gulp gulp
+#npmInstall ncu npm-check-updates
