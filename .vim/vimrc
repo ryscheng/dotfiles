@@ -250,9 +250,9 @@ set showbreak=              " Show for lines that have been wrapped, like Emacs
 set showmatch               " Hilight matching braces/parens/etc.
 set sidescrolloff=3         " Keep cursor away from this many chars left/right
 set smartcase               " Lets you search for ALL CAPS
-set statusline+=%#warningmsg# " Add Syntastic to the status line (begin)
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*            " Add Syntastic to the status line (end)
+"set statusline+=%#warningmsg# " Add Syntastic to the status line (begin)
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*            " Add Syntastic to the status line (end)
 set softtabstop=2           " Spaces 'feel' like tabs
 set suffixes+=.pyc          " Ignore these files when tab-completing
 set tabstop=2               " The One True Tab
@@ -366,13 +366,13 @@ nmap ; :CtrlPBuffer<CR>
 "let g:Powerline_symbols = "unicode"
 
 " Syntastic
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump=0
-let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_enable_signs=1
+"let g:syntastic_auto_jump=0
+"let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 " GitGutter
 let g:gitgutter_sign_added = '∙'
