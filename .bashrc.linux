@@ -145,3 +145,6 @@ eval `keychain --eval --agents "gpg,ssh"`
 #export ROS_IP=128.208.4.46
 #export ROS_MASTER_URI=http://${ROS_IP}:11311
 #export ROS_MASTER_URI=http://128.208.7.254:11311
+
+# Homebrew
+#eval $(/home/ryscheng/.linuxbrew/bin/brew shellenv)
