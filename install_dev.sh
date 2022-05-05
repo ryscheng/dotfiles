@@ -75,12 +75,15 @@ fi
 ##### APT #####
 #sudo apt-get dist-upgrade
 
+aptInstall gparted gparted
+aptInstall keychain keychain
+aptInstall tmux tmux
+aptInstall vim vim
+
 #aptInstall cargo cargo
 #aptInstall go golang
 #aptInstall node nodejs 
 #aptInstall rustc rustc
-aptInstall tmux tmux
-aptInstall vim vim
 
 #aptInstall gpg2 gpgv2
 #aptInstall gpg-agent gnupg-agent
