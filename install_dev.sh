@@ -50,7 +50,6 @@ addLink -d $DOTFILES/.vim ~/.vim
 addLink -f ~/.vim/vimrc ~/.vimrc
 cd
 
-
 ##### YUBIKEY #####
 if which ykpersonalize >/dev/null; then echo "Yubikey tools already installed"
 else
@@ -63,7 +62,7 @@ fi
 ##### NODE.JS #####
 if which nvm >/dev/null; then echo "Node.js already installed"
 else
-	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 fi
 
 ##### RUST #####
@@ -75,7 +74,7 @@ fi
 ##### APT #####
 #sudo apt-get dist-upgrade
 
-aptInstall gparted gparted
+#aptInstall gparted gparted
 aptInstall keychain keychain
 aptInstall tmux tmux
 aptInstall vim vim
