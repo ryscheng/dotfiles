@@ -118,40 +118,57 @@ fi
 
 ### CUSTOM ###
 
-# added by travis gem
-#[ -f /home/ryscheng/.travis/travis.sh ] && source /home/ryscheng/.travis/travis.sh
-
-#PATH
-#export PATH=$PATH:~/bin/android-sdk-linux/tools
-#export PATH=$PATH:~/bin/android-sdk-linux/platform-tools
-
-#DEV
-#export GOPATH=/usr/local/lib/gopath
-#export GEM_HOME=/usr/local/lib/rubygems
-
-#PATH
-#export PATH=$PATH:$GEM_HOME/bin
-#export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$HOME/.cargo/bin
-export PATH=$PATH:$HOME/.foundry/bin
-
 #SSH-AGENT
 eval `keychain --eval --agents "gpg,ssh"`
 #export SSH_AUTH_SOCK=`gpgconf --list-dirs agent-ssh-socket`
 #export GPG_TTY=$(tty)
 
-#ROS
+# android
+#export PATH=$PATH:~/bin/android-sdk-linux/tools
+#export PATH=$PATH:~/bin/android-sdk-linux/platform-tools
+# android end
+
+# go
+#export GOPATH=/usr/local/lib/gopath
+#export PATH=$PATH:$GOPATH/bin
+# go end
+
+# ruby
+#export GEM_HOME=/usr/local/lib/rubygems
+#export PATH=$PATH:$GEM_HOME/bin
+# ruby end
+
+# ros
 #source /opt/ros/indigo/setup.bash
 #source ~/infobot/devel/setup.bash
 #export ROS_IP=128.208.4.46
 #export ROS_MASTER_URI=http://${ROS_IP}:11311
 #export ROS_MASTER_URI=http://128.208.7.254:11311
+# ros end
 
-# Homebrew
+# homebrew
 #eval $(/home/ryscheng/.linuxbrew/bin/brew shellenv)
+# homebrew end
 
-export NVM_DIR="$HOME/.nvm"
+# nvm
+export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-. "$HOME/.cargo/env"
+# nvm end
 
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# foundry
+export PATH=$PATH:$HOME/.foundry/bin
+# foundry end
+
+# cargo
+export PATH=$PATH:$HOME/.cargo/bin
+. "$HOME/.cargo/env"
+# cargo end

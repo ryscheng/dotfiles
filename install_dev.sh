@@ -46,6 +46,7 @@ addLink -f $DOTFILES/.bashrc.linux ~/.bashrc
 addLink -f $DOTFILES/.gitconfig.bare ~/.gitconfig
 addLink -f $DOTFILES/.gitignore ~/.gitignore
 addLink -f $DOTFILES/.tmux.conf ~/.tmux.conf
+addLink -d $DOTFILES/nvim ~/.config/nvim
 addLink -d $DOTFILES/.vim ~/.vim
 addLink -f ~/.vim/vimrc ~/.vimrc
 cd
@@ -74,8 +75,11 @@ fi
 ##### APT #####
 #sudo apt-get dist-upgrade
 
+aptInstall fd fdclone
+aptInstall gcc gcc
 #aptInstall gparted gparted
 aptInstall keychain keychain
+aptInstall rg ripgrep
 aptInstall tmux tmux
 aptInstall vim vim
 
@@ -88,8 +92,8 @@ aptInstall vim vim
 #aptInstall gpg-agent gnupg-agent
 #aptInstall pcsc_scan pcsc-tools
 #aptInstall pcscd pcscd
-#aptInstall vlc vlc
 
 ##### NPM #####
-#npmInstall gulp gulp
-#npmInstall ncu npm-check-updates
+npmInstall pnpm pnpm
+npmInstall ncu npm-check-updates
+npmInstall neovim-node-host neovim
