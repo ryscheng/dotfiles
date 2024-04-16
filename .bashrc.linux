@@ -120,8 +120,8 @@ fi
 
 #SSH-AGENT
 eval `keychain --eval --agents "gpg,ssh"`
-#export SSH_AUTH_SOCK=`gpgconf --list-dirs agent-ssh-socket`
-#export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK=`gpgconf --list-dirs agent-ssh-socket`
+export GPG_TTY=$(tty)
 
 # android
 #export PATH=$PATH:~/bin/android-sdk-linux/tools
