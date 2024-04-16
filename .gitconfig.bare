@@ -16,3 +16,5 @@
   tree = log --graph --decorate --pretty=format:\"%Cred%h%Creset %an (%ar): %s %Cgreen%d\"
   up = "!git remote update -p; git merge --ff-only @{u}"
 #  tree = log --graph --oneline --decorate
+[pull]
+  rebase = true
