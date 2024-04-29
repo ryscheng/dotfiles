@@ -42,7 +42,7 @@ if [ -d $DOTFILES ]; then echo "github:dotfiles already cloned"
 else 
 	git clone git@github.com:ryscheng/dotfiles.git
 fi
-addLink -f $DOTFILES/.bashrc.linux ~/.bashrc
+addLink -f $DOTFILES/.bashrc.dev ~/.bashrc
 addLink -f $DOTFILES/.gitconfig.bare ~/.gitconfig
 addLink -f $DOTFILES/.gitignore ~/.gitignore
 addLink -f $DOTFILES/.tmux.conf ~/.tmux.conf
