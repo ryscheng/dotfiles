@@ -17,6 +17,7 @@
 *.pyc
 
 # Project Files
+data/
 .ropeproject
 .unison.*.unison.tmp-bad
 *_flymake.*

@@ -2,7 +2,7 @@
 tmux new-session -d -s main
 
 tmux new-window -t main:1 'bash'
-tmux send-keys -t main:1 'cd ~/git/jupyter/agent; docker compose up'
+tmux send-keys -t main:1 'cd ~/git/github/ryscheng/dotfiles/docker; docker compose up'
 tmux new-window -t main:2 'bash'
 tmux send-keys -t main:2 'cd ~/git/; nvim'
 tmux new-window -t main:3 'bash'
