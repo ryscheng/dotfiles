@@ -19,16 +19,13 @@ services:
       - 8443:8443
     restart: unless-stopped
 
-  open-webui:
-    image: ghcr.io/open-webui/open-webui:ollama
-    container_name: open-webui
-    #image: ghcr.io/open-webui/open-webui:cuda
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
     ports:
-      - 8000:8080
       - 11434:11434
     volumes:
       - ./data/ollama:/root/.ollama
-      - ./data/open-webui:/app/backend/data 
     deploy:
       resources:
         reservations:
@@ -36,4 +33,15 @@ services:
             - driver: nvidia
               count: all
               capabilities: [gpu]
+
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    ports:
+      - 8000:8080
+    volumes:
+      - ./data/open-webui:/app/backend/data 
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
 
