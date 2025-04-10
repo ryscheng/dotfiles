@@ -151,8 +151,8 @@ export PATH=$PATH:$HOME/.cargo/bin
 # cargo end
 
 ## go
-#export GOPATH=/usr/local/lib/gopath
-#export PATH=$PATH:$GOPATH/bin
+export GOPATH=/usr/local/lib/gopath
+export PATH=$PATH:$GOPATH/bin
 # go end
 
 # ruby
