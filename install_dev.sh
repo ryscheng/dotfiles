@@ -49,6 +49,7 @@ addLink -f $DOTFILES/.tmux.conf ~/.tmux.conf
 addLink -d $DOTFILES/nvim ~/.config/nvim
 addLink -d $DOTFILES/.vim ~/.vim
 addLink -f ~/.vim/vimrc ~/.vimrc
+addLink -d $DOTFILES/.claude ~/.claude
 cd
 
 ##### YUBIKEY #####
