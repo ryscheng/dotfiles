@@ -26,6 +26,8 @@ services:
       - 11434:11434
     volumes:
       - ~/docker_volumes/ollama:/root/.ollama
+    environment:
+      - OLLAMA_CONTEXT_LENGTH=65536
     deploy:
       resources:
         reservations:
