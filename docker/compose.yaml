@@ -25,7 +25,7 @@ services:
     ports:
       - 11434:11434
     volumes:
-      - ./data/ollama:/root/.ollama
+      - ~/docker_volumes/ollama:/root/.ollama
     deploy:
       resources:
         reservations:
@@ -40,7 +40,35 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - ./data/open-webui:/app/backend/data 
+      - ~/docker_volumes/open-webui:/app/backend/data 
     environment:
       - OLLAMA_BASE_URL=http://ollama:11434
 
+  hermes:
+    image: nousresearch/hermes-agent
+    container_name: hermes
+    command: gateway run
+    ports:
+      - 8081:9119
+    volumes:
+      - ~/docker_volumes/hermes:/opt/data 
+    environment:
+      - HERMES_DASHBOARD=1
+
+#  openclaw:
+#    image: ghcr.io/openclaw/openclaw:latest
+#    container_name: openclaw
+#    ports:
+#      - "8082:3000"
+#    volumes:
+#      - ~/docker_volumes/openclaw/config:/root/.openclaw          # Config and data
+#      - ~/docker_volumes/openclaw/workspace:/root/workspace  # Agent workspace
+#    environment:
+#      - OLLAMA_API_KEY=ollama-local
+#    mem_limit: 2g            # Prevent runaway memory usage
+#    logging:
+#      driver: json-file
+#      options:
+#        max-size: "10m"
+#        max-file: "3"
+#
